@@ -52,7 +52,7 @@ export default {
             this.errors = ''
             this.error = ''
             axios
-                .post('/api/login/', this.form)
+                .post('/api/login', this.form)
                 .then(res => {
                     if (res.data.status) {
                         localStorage.setItem('status', res.data.status)

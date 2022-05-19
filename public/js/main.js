@@ -156,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.errors = '';
       this.error = '';
-      axios.post('/api/login/', this.form).then(function (res) {
+      axios.post('/api/login', this.form).then(function (res) {
         if (res.data.status) {
           localStorage.setItem('status', res.data.status);
 
@@ -263,7 +263,7 @@ __webpack_require__.r(__webpack_exports__);
     register: function register() {
       var _this = this;
 
-      axios.post('/api/register/', this.form).then(function (res) {
+      axios.post('/api/register', this.form).then(function (res) {
         if (res.data.status) {
           _this.$router.push({
             name: 'login'
@@ -338,7 +338,7 @@ __webpack_require__.r(__webpack_exports__);
     create: function create() {
       var _this = this;
 
-      axios.post('/api/crud/', this.form).then(function (res) {
+      axios.post('/api/crud', this.form).then(function (res) {
         if (res.data.status) {
           _this.$router.push({
             name: 'crud'
@@ -488,7 +488,7 @@ __webpack_require__.r(__webpack_exports__);
     loadPost: function loadPost() {
       var _this = this;
 
-      axios.get('/api/crud/').then(function (res) {
+      axios.get('/api/crud').then(function (res) {
         _this.posts = res.data;
         _this.loader = false;
         _this.totalRows = _this.posts.length;

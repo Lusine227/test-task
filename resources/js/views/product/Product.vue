@@ -107,7 +107,7 @@ export default {
     methods: {
         loadPost() {
             axios
-                .get('/api/crud/')
+                .get('/api/crud')
                 .then(res => {
                     this.posts = res.data;
                     this.loader = false;

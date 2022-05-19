@@ -50,7 +50,7 @@ export default{
     methods:{
         register(){
             axios
-                .post('/api/register/',this.form)
+                .post('/api/register',this.form)
                 .then(res=>{
                     if(res.data.status){
                         this.$router.push({name:'login'});

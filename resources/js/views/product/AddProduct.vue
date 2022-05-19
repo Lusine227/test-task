@@ -45,7 +45,7 @@ export default {
     methods: {
         create() {
             axios
-                .post('/api/crud/', this.form)
+                .post('/api/crud', this.form)
                 .then(res => {
                     if (res.data.status) {
                         this.$router.push({name: 'crud'});
